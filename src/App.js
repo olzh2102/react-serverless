@@ -3,7 +3,6 @@ import {
 	BrowserRouter as Router,
 	Route,
 	Switch,
-	Link,
 } from 'react-router-dom'
 
 import Game from './pages/Game'
@@ -12,14 +11,12 @@ import HighScores from './pages/HighScores'
 import Home from './pages/Home'
 
 import './App.css'
+import Navbar from './components/navbar'
 
 function App() {
 	return (
 		<Router>
-			<Link to="/">Home</Link>
-			<Link to="/game">Game</Link>
-			<Link to="/game-over">GameOver</Link>
-			<Link to="/high-scores">HighScores</Link>
+			<Navbar />
 			<Switch>
 				<Route path="/game" component={Game} />
 				<Route path="/high-scores" component={HighScores} />

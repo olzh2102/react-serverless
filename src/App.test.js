@@ -17,19 +17,10 @@ describe('App', () => {
 				<App />
 			</Router>
 		)
+
 		// act
 		// assert
 		expect(getByRole('heading')).toHaveTextContent(/home/i)
-
-		// act
-		user.click(getByText('Game'))
-		// assert
-		expect(getByRole('heading')).toHaveTextContent(/game/i)
-
-		// act
-		user.click(getByText('GameOver'))
-		// assert
-		expect(getByRole('heading')).toHaveTextContent(/gameover/i)
 
 		// act
 		user.click(getByText('HighScores'))
