@@ -10,19 +10,33 @@ import GameOver from './pages/GameOver'
 import HighScores from './pages/HighScores'
 import Home from './pages/Home'
 
-import './App.css'
 import Navbar from './components/navbar'
+
+import { Container } from './styled/container.styles'
+import { Main } from './styled/main.styles'
+import Global from './styled/global.styles'
 
 function App() {
 	return (
 		<Router>
-			<Navbar />
-			<Switch>
-				<Route path="/game" component={Game} />
-				<Route path="/high-scores" component={HighScores} />
-				<Route path="/game-over" component={GameOver} />
-				<Route path="/" component={Home} />
-			</Switch>
+			<Global />
+			<Main>
+				<Container>
+					<Navbar />
+					<Switch>
+						<Route path="/game" component={Game} />
+						<Route
+							path="/high-scores"
+							component={HighScores}
+						/>
+						<Route
+							path="/game-over"
+							component={GameOver}
+						/>
+						<Route path="/" component={Home} />
+					</Switch>
+				</Container>
+			</Main>
 		</Router>
 	)
 }
