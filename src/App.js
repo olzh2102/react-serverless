@@ -16,29 +16,21 @@ import { Container } from './styled/container.styles'
 import { Main } from './styled/main.styles'
 import Global from './styled/global.styles'
 
-function App() {
-	return (
-		<Router>
-			<Global />
-			<Main>
-				<Container>
-					<Navbar />
-					<Switch>
-						<Route path="/game" component={Game} />
-						<Route
-							path="/high-scores"
-							component={HighScores}
-						/>
-						<Route
-							path="/game-over"
-							component={GameOver}
-						/>
-						<Route path="/" component={Home} />
-					</Switch>
-				</Container>
-			</Main>
-		</Router>
-	)
-}
+const App = () => (
+	<Router>
+		<Global />
+		<Main>
+			<Container>
+				<Navbar />
+				<Switch>
+					<Route path="/game" component={Game} />
+					<Route path="/high-scores" component={HighScores} />
+					<Route path="/game-over" component={GameOver} />
+					<Route path="/" component={Home} />
+				</Switch>
+			</Container>
+		</Main>
+	</Router>
+)
 
 export default App
